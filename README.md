@@ -1,21 +1,23 @@
 # java-collections
+
 Vortragsnotizen und Ressourcen zum Thema "Java Collections"
 
 # Frage zum Kennenlernen
 
 * Heute geht es um "Collections" (deutsch Sammlungen)
-* Hat jemand von Euch eine ungewöhnliche Sammelleidenschaft? 
-  * Link teilen
+* Hat jemand von Euch eine ungewöhnliche Sammelleidenschaft?
+    * Link teilen
 
 # Einleitungsgeschichte
 
 * Es war einmal, vor langer, langer Zeit
-  * Ein Königspaar, das eine Tochter bekommt
-    * Haut so weiß wie Schnee
-    * Lippen so rot wie Blut
-    * Haare so schwarz wie Ebenholz
-  * Der König lädt zur Tauffeier ein
-  * Er baut sich ein Programm zur Partyorganisation
+    * Ein Königspaar, das eine Tochter bekommt
+        * Haut so weiß wie Schnee
+        * Lippen so rot wie Blut
+        * Haare so schwarz wie Ebenholz
+    * Der König lädt zur Tauffeier ein
+    * Er baut sich ein Programm zur Partyorganisation
+
 ```java
 public class Tauffeier {
     public static void main(String[] args) {
@@ -37,28 +39,28 @@ public class Tauffeier {
 }
 ```
 
-  * Ups ;)
-  * Die 13. Fee schimpft fürchterlich und fragt:
+* Ups ;)
+* Die 13. Fee schimpft fürchterlich und fragt:
     * Warum muss man bei Java-Arrays eigentlich immer eine fixe Größe angeben?
     * Wäre da nicht ein wenig mehr Flexibilität angebracht?
 
 # Gibt's da vielleicht ein neues Sprachkonstrukt?
 
-  * Wir kennen bereits primitive Datentypen, Arrays, Objekte
+* Wir kennen bereits primitive Datentypen, Arrays, Objekte
     * Gibt es da vielleicht Arrays mit dynamischer Länge?
     * Nein, die Liste an Datentypen im Sprachumfang ist abgeschlossen
-  * ABER: Durch geschicktes Kombinieren dieser Datentypen kann man tolle Dinge bauen! (z.B. Listen mit flexibler Länge)
-  * Einige hilfreiche Klassen werden bereits "mitgeliefert"
-  * Eines davon ist: `ArrayList`
-  * LEGO: Wie funktioniert die ArrayList?
+* ABER: Durch geschicktes Kombinieren dieser Datentypen kann man tolle Dinge bauen! (z.B. Listen mit flexibler Länge)
+* Einige hilfreiche Klassen werden bereits "mitgeliefert"
+* Eines davon ist: `ArrayList`
+* LEGO: Wie funktioniert die ArrayList?
     * Einzelstein [o] = int, Ganzzahl
     * flache Leiste = Array [oooooooooo]
     * Wir fangen mit einer Leiste mit 10 an
-      * Wir fügen einen Wert hinzu
-      * Wir merken uns die Länge
+        * Wir fügen einen Wert hinzu
+        * Wir merken uns die Länge
     * Wenn die Leiste zu kurz wird
-      * Wir nehmen eine neue, längere Leiste (in der Regel doppelt)
-      * Kopieren den Inhalt der alten Leiste in die neue
+        * Wir nehmen eine neue, längere Leiste (in der Regel doppelt)
+        * Kopieren den Inhalt der alten Leiste in die neue
 
 ```java
 public class Tauffeier {
@@ -81,19 +83,43 @@ public class Tauffeier {
 }
 ```
 
-    * Die Klasse ArrayList bietet viele praktische Methoden
-      * `add` fügt ein Element hinzu
-      * `get` liefert ein Element an einer bestimmten Stelle
-      * `set` setzt ein Element an einer bestimmten Stelle
-      * `remove` entfernt ein Element an einer bestimmten Stelle
-      * `size` liefert die Anzahl der Elemente
-      * `clear` entfernt alle Elemente
+* Die Klasse ArrayList bietet viele praktische Methoden
+  * `add` fügt ein Element hinzu
+  * `get` liefert ein Element an einer bestimmten Stelle
+  * `set` setzt ein Element an einer bestimmten Stelle
+  * `remove` entfernt ein Element an einer bestimmten Stelle
+  * `size` liefert die Anzahl der Elemente
+  * `clear` entfernt alle Elemente
 
-    * Unpraktisch:
-      * `get` liefert uns `Object`
-      * deshalb: `List<String> <= wir geben dem Java-Compiler beim Erstellen des Objekts einen Tipp:
-        * Bitte beschwere Dich, falls wir etwas anderes in der Liste speichern wollen
-        * Im Gegenzug gib uns bei `get` immer String statt Object zurück
-        * Einverstanden? "Ok, Deal".
+* Unpraktisch:
+  * `get` liefert uns `Object`
+  * deshalb: `List<String> <= wir geben dem Java-Compiler beim Erstellen des Objekts einen Tipp:
+    * Bitte beschwere Dich, falls wir etwas anderes in der Liste speichern wollen
+    * Im Gegenzug gib uns bei `get` immer String statt Object zurück
+    * Einverstanden? "Ok, Deal".
+    * Achtung: primitive Datentypen können nicht angegeben werden - da muss man statt  `int` dann `Integer`
+      schreiben
+    
+## Übung: Bitte baut Eure Anwendung aus den vergangenen Tagen auf eine ArrayList um
 
-    * Übung: Bitte baut Eure Anwendung aus den vergangenen Tagen auf eine ArrayList um
+## Duplikate vermeiden
+
+## Schlüssel-Wert-Paare
+
+## Übung: Bitte baut Eure Anwendung aus den vergangenen Tagen auf eine HashMap um
+
+## Zusammenfassung: Wie wähle ich die richtige Collection?
+
+* Willst Du einfach nur mehrere Werte in einer Variablen speichern?<br/>`List<...> meineListe = new ArrayList<...>();`
+* Willst Du auch vorne und hinten ein Element einfügen und löschen können (z.B. Warteliste)
+  ?<br/>`Queue<...> meineWarteschlange = new LinkedList<...>();` (oder `Deque<...>`)
+* Willst Du Duplikate vermeiden?<br/>`Set<...> meineSammlung = new HashSet<...>();`
+* Willst Du Schlüssel-Wert-Paare verwalten?<br/>`Map<...> meinNachschlagewerk = new Hashmap<...>()`
+
+Und für Spezialfälle suche im Internet nach einer geeigneten Klasse (vorzugsweise aus dem Standard-Java-Umfang)
+Z.B. Unveränderliches, automatisch Sortiertes, für gleichzeitige Zugriffe, usw.
+
+Arrays wie int[] oder String[] sind nur für spezielle Anwendungsbereiche.
+
+**Achtung** Bei `Hash...`-Klassen muss definiert werden, was als "Duplikat" gilt. Dazu: `equals` und `hashCode`
+überschreiben. 
