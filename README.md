@@ -187,3 +187,7 @@ Schauspieler dazu festlegen."
 "Du entwickelst eine Upload-Funktion für Dateien. Alle vom Anwender ins Fenster gezogenen, hochzuladenden Dateien sollen
 mit einer Warteanimation dargestellt werden. Sobald eine Datei fertig hochgeladen ist, soll sie aus der Ansicht
 verschwinden. Es soll jeweils die Datei hochgeladen werden, die als Erstes ins Fenster gezogen wurde."
+
+## Further Reading
+
+* https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/doc-files/coll-overview.html
