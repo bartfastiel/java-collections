@@ -84,22 +84,22 @@ public class Tauffeier {
 ```
 
 * Die Klasse ArrayList bietet viele praktische Methoden
-  * `add` fügt ein Element hinzu
-  * `get` liefert ein Element an einer bestimmten Stelle
-  * `set` setzt ein Element an einer bestimmten Stelle
-  * `remove` entfernt ein Element an einer bestimmten Stelle
-  * `size` liefert die Anzahl der Elemente
-  * `clear` entfernt alle Elemente
+    * `add` fügt ein Element hinzu
+    * `get` liefert ein Element an einer bestimmten Stelle
+    * `set` setzt ein Element an einer bestimmten Stelle
+    * `remove` entfernt ein Element an einer bestimmten Stelle
+    * `size` liefert die Anzahl der Elemente
+    * `clear` entfernt alle Elemente
 
 * Unpraktisch:
-  * `get` liefert uns `Object`
-  * deshalb: `List<String> <= wir geben dem Java-Compiler beim Erstellen des Objekts einen Tipp:
-    * Bitte beschwere Dich, falls wir etwas anderes in der Liste speichern wollen
-    * Im Gegenzug gib uns bei `get` immer String statt Object zurück
-    * Einverstanden? "Ok, Deal".
-    * Achtung: primitive Datentypen können nicht angegeben werden - da muss man statt  `int` dann `Integer`
-      schreiben
-    
+    * `get` liefert uns `Object`
+    * deshalb: `List<String> <= wir geben dem Java-Compiler beim Erstellen des Objekts einen Tipp:
+        * Bitte beschwere Dich, falls wir etwas anderes in der Liste speichern wollen
+        * Im Gegenzug gib uns bei `get` immer String statt Object zurück
+        * Einverstanden? "Ok, Deal".
+        * Achtung: primitive Datentypen können nicht angegeben werden - da muss man statt  `int` dann `Integer`
+          schreiben
+
 ## Übung: Bitte baut Eure Anwendung aus den vergangenen Tagen auf eine ArrayList um
 
 ## Duplikate vermeiden
@@ -107,6 +107,14 @@ public class Tauffeier {
 ## Schlüssel-Wert-Paare
 
 ## Übung: Bitte baut Eure Anwendung aus den vergangenen Tagen auf eine HashMap um
+
+## Falls noch Zeit ist
+
+* Collections.sort
+* String.join
+* Übersicht über die vielen anderen Collections
+  * TreeSet, ConcurrentHashMap, usw.
+* Übung "GuestList"
 
 ## Zusammenfassung: Wie wähle ich die richtige Collection?
 
@@ -122,4 +130,45 @@ Z.B. Unveränderliches, automatisch Sortiertes, für gleichzeitige Zugriffe, usw
 Arrays wie int[] oder String[] sind nur für spezielle Anwendungsbereiche.
 
 **Achtung** Bei `Hash...`-Klassen muss definiert werden, was als "Duplikat" gilt. Dazu: `equals` und `hashCode`
-überschreiben. 
+überschreiben.
+
+## Abschluss-Übung
+
+Jeder Teilnehmer soll eine dieser Aufgaben per privater Nachricht bekommen. Reihum soll ein Teilnehmer nach dem anderen
+seine Aufgabe vorlesen. Dann diskutiert die Gruppe gemeinsam die beste Lösung (= den passenden Collection-Typ).
+
+Jeweils soll entschieden werden, passt "ArrayList", "LinkedList", "HashSet" oder "HashMap" am besten? (Bonus: jeweils noch das passende Interface - also "Queue", "Stack", "Map", "Set" usw.)
+
+Welche Collection ist am besten für die Aufgabe?
+
+"Du möchtest die Züge eines Schachspiels mitschreiben. Eine Klasse 'Schachzug' hast du bereits."
+
+"Für die Webseite des Sportvereins möchtest Du die Sportarten aufzählen. Die Reihenfolge soll genau der Reihenfolge in
+der gedruckten Brochure entsprechen."
+
+"Du bringst abgezählte Schokoladenosterhasen mit ins Büro und möchtest notieren, welchem Deiner Kollegen Du bereits
+einen Hasen ausgeteilt hast, um niemandem aus Vergesslichkeit zwei zu geben."
+
+"In Deinem neu entwickelten Online-Shop suchst Du eine Speicherform für den Warenkorb. Du möchtest Pro Artikelnummer die
+Menge im Warenkorb speichern."
+
+"Du schreibst eine Verwaltungssoftware für Zahnarztpraxen. Es sollen die Patienten entsprechend Ihrer Ankunft in der
+Praxis gespeichert werden und nach und nach immer ein Patient in den Behandlungsraum geschickt werden. Wer am längsten
+wartet, soll jeweils als nächstes aufgerufen werden."
+
+"In Deiner neuen Software für die Personalabteilung möchtest Du abspeichern, welcher Kollege bereits die
+Datenschutzerklärung unterschrieben hat."
+
+"In dem von Dir entwickelten Briefmarkenonlineshop möchtest Du pro Artikelnummer den Preis in Euro abspeichern."
+
+"Eine Schreinerei möchte während des Jahres die Adressen der Kunden sammeln und dann zu Weihnachten Grußkarten
+verschicken."
+
+"Du möchtest für eine Grundschulklasse eine Tabelle mit dem Schulfach und der dazugehörigen Lehrkraft speichern."
+
+"Du verteilst bei einem Theaterstück die Rollen. Du weißt die zu besetzenden Rollen und möchtest nach und nach den
+Schauspieler dazu festlegen."
+
+"Du entwickelst eine Upload-Funktion für Dateien. Alle vom Anwender ins Fenster gezogenen, hochzuladenden Dateien sollen
+mit einer Warteanimation dargestellt werden. Sobald eine Datei fertig hochgeladen ist, soll sie aus der Ansicht
+verschwinden. Es soll jeweils die Datei hochgeladen werden, die als Erstes ins Fenster gezogen wurde."
