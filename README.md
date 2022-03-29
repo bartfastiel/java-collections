@@ -2,11 +2,26 @@
 
 Vortragsnotizen und Ressourcen zum Thema "Java Collections"
 
+# Vorstellung
+
+* Seit meiner Kindheit Programmierer, schon in Schulzeit Programmierunterricht gehalten
+* Vor knapp 20 Jahren an Akademie Java gelernt (ähnlich wie hier)
+* Lead-Developer, Scrum-Master, Team-Coach
+
+Ich möchte
+* das Unterrichtskonzept kennenlernen
+* mich auf mein erstes Bootcamp im Mai vorbereiten
+* gemeinsam Spaß haben
+
+Danke, dass ich hier sein darf.
+
 # Frage zum Kennenlernen
 
 * Heute geht es um "Collections" (deutsch Sammlungen)
 * Hat jemand von Euch eine ungewöhnliche Sammelleidenschaft?
-    * Link teilen
+    * Briefmarken
+    * Diddl-Postkarten
+    * Münzen
 
 # Einleitungsgeschichte
 
